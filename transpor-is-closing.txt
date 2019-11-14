@@ -1,0 +1,117 @@
+2019-11-14T03:31:13.0735855Z [command]C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.FileSystem } catch { } ; [System.IO.Compression.ZipFile]::ExtractToDirectory('C:\Agents\TFSBDALTP02-x64-1\_work\_temp\74a14900-49f2-4d3e-8939-c1871fbe30ed', 'C:\Agents\TFSBDALTP02-x64-1\_work\_temp\87b30e67-c42f-4800-95c8-db8b179ec1ea')"
+2019-11-14T03:31:16.2331997Z Prepending PATH environment variable with directory: C:\Agents\TFSBDALTP02-x64-1\_work\_temp\87b30e67-c42f-4800-95c8-db8b179ec1ea\pulumi\bin
+2019-11-14T03:31:16.2388957Z [command]C:\Agents\TFSBDALTP02-x64-1\_work\_temp\87b30e67-c42f-4800-95c8-db8b179ec1ea\pulumi\bin\pulumi.exe version
+2019-11-14T03:31:16.6857213Z v1.5.2
+2019-11-14T03:31:16.6943891Z [command]C:\Agents\TFSBDALTP02-x64-1\_work\_temp\87b30e67-c42f-4800-95c8-db8b179ec1ea\pulumi\bin\pulumi.exe login
+2019-11-14T03:31:16.8485430Z Logged into pulumi.com as rajeshkumar (https://app.pulumi.com/rajeshkumar)
+2019-11-14T03:31:16.8573977Z [command]C:\Agents\TFSBDALTP02-x64-1\_work\_temp\87b30e67-c42f-4800-95c8-db8b179ec1ea\pulumi\bin\pulumi.exe stack select dev
+2019-11-14T03:31:17.3201233Z [command]C:\Agents\TFSBDALTP02-x64-1\_work\_temp\87b30e67-c42f-4800-95c8-db8b179ec1ea\pulumi\bin\pulumi.exe up
+2019-11-14T03:31:17.7805878Z Previewing update (dev):
+2019-11-14T03:31:19.1205641Z 
+2019-11-14T03:31:20.2198363Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 
+2019-11-14T03:31:21.4597864Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running Store Portal Apps Settings -{"resourceGroup":{"name":"dcx-store-portal-dev","createIfNotFound":true},"appServicePlan":{"id":"/subscriptions/f1388d63-e297-4940-8e8b-90cdeb732f5d/resourcegroups/dcx-store-portal-common-rg/providers/Microsoft.Web/serverFarms/dcx-store-portal-asp","name":"dcx-store-portal-asp"},"appInsights":{"name":"dcx-store-portal-dev","applicationType":"Web","ignore":false},"storePortalApiAppService":{"name":"storeportalapi-dev","httpsOnly":true,"siteConfig":{"alwaysOn":true,"dockerImageName":"nginx"}},"storePortalUiAppService":{"name":"storeportal-dev","httpsOnly":true,"siteConfig":{"alwaysOn":true,"dockerImageName":"nginx"}},"orderApiappService":{"name":"storeportalorderapi-dev","httpsOnly":true,"siteConfig":{"alwaysOn":true,"dockerImageName":"nginx"}},"tags":[{"name":"CreatedBy","value":"KG"},{"name":"CreatedUsing","value":"Pulumi"},{"name":"Team","value":"DCX"},{"name":"AppGroup","value":"StorePortal"}]}
+2019-11-14T03:31:21.6978806Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running read azure:appservice:Plan dcx-store-portal-asp-asp
+2019-11-14T03:31:24.2046887Z     azure:core:ResourceGroup dcx-store-portal-dev-rg  
+2019-11-14T03:31:24.2157996Z     azure:appinsights:Insights dcx-store-portal-dev-ai  
+2019-11-14T03:31:24.6554599Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running read azure:appservice:Plan dcx-store-portal-asp-asp
+2019-11-14T03:31:24.7265354Z  ~  azure:appservice:AppService storeportal-dev-as update [diff: ~appServicePlanId,appSettings,siteConfig]
+2019-11-14T03:31:24.7318177Z  ~  azure:appservice:AppService storeportalapi-dev-as update [diff: ~appServicePlanId,appSettings,siteConfig]
+2019-11-14T03:31:24.7350722Z  ~  azure:appservice:AppService storeportalorderapi-dev-as update [diff: ~appServicePlanId]
+2019-11-14T03:31:24.7760585Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev  1 message
+2019-11-14T03:31:24.7765511Z  
+2019-11-14T03:31:24.7766444Z Resources:
+2019-11-14T03:31:24.7766525Z     ~ 3 to update
+2019-11-14T03:31:24.7766645Z     3 unchanged
+2019-11-14T03:31:24.7766704Z 
+2019-11-14T03:31:24.9779907Z Updating (dev):
+2019-11-14T03:31:26.0361120Z 
+2019-11-14T03:31:27.0094218Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 
+2019-11-14T03:31:28.3246646Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running Store Portal Apps Settings -{"resourceGroup":{"name":"dcx-store-portal-dev","createIfNotFound":true},"appServicePlan":{"id":"/subscriptions/f1388d63-e297-4940-8e8b-90cdeb732f5d/resourcegroups/dcx-store-portal-common-rg/providers/Microsoft.Web/serverFarms/dcx-store-portal-asp","name":"dcx-store-portal-asp"},"appInsights":{"name":"dcx-store-portal-dev","applicationType":"Web","ignore":false},"storePortalApiAppService":{"name":"storeportalapi-dev","httpsOnly":true,"siteConfig":{"alwaysOn":true,"dockerImageName":"nginx"}},"storePortalUiAppService":{"name":"storeportal-dev","httpsOnly":true,"siteConfig":{"alwaysOn":true,"dockerImageName":"nginx"}},"orderApiappService":{"name":"storeportalorderapi-dev","httpsOnly":true,"siteConfig":{"alwaysOn":true,"dockerImageName":"nginx"}},"tags":[{"name":"CreatedBy","value":"KG"},{"name":"CreatedUsing","value":"Pulumi"},{"name":"Team","value":"DCX"},{"name":"AppGroup","value":"StorePortal"}]}
+2019-11-14T03:31:28.7033220Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running read azure:appservice:Plan dcx-store-portal-asp-asp
+2019-11-14T03:31:28.7053419Z     azure:core:ResourceGroup dcx-store-portal-dev-rg  
+2019-11-14T03:31:28.9382584Z     azure:appinsights:Insights dcx-store-portal-dev-ai  
+2019-11-14T03:31:29.5130738Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running read azure:appservice:Plan dcx-store-portal-asp-asp
+2019-11-14T03:31:29.7439872Z  ~  azure:appservice:AppService storeportal-dev-as updating [diff: ~appServicePlanId,appSettings,siteConfig]
+2019-11-14T03:31:29.7488907Z  ~  azure:appservice:AppService storeportalapi-dev-as updating [diff: ~appServicePlanId,appSettings,siteConfig]
+2019-11-14T03:31:29.7529047Z  ~  azure:appservice:AppService storeportalorderapi-dev-as updating [diff: ~appServicePlanId]
+2019-11-14T03:31:35.3706588Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running panic: interface conversion: interface {} is nil, not map[string]interface {}
+2019-11-14T03:31:35.3708097Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running goroutine 77 [running]:
+2019-11-14T03:31:35.3708247Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm/helpers/azure.ExpandAppServiceLogs(0x3724ea0, 0xc000d3d880, 0x4, 0x3724ea0, 0xc000d3d880, 0xc000d3d801)
+2019-11-14T03:31:35.3708521Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm/helpers/azure/app_service.go:1256 +0xcb0
+2019-11-14T03:31:35.3708700Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm.resourceArmAppServiceUpdate(0xc000101b20, 0x36e2b60, 0xc0000b8480, 0x0, 0x0)
+2019-11-14T03:31:35.3708871Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm/resource_arm_app_service.go:445 +0x192d
+2019-11-14T03:31:35.3709064Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc00000c200, 0xc0008dd9f0, 0xc000978080, 0x36e2b60, 0xc0000b8480, 0x1, 0x0, 0x0)
+2019-11-14T03:31:35.3709312Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema/resource.go:311 +0x26b
+2019-11-14T03:31:35.3709483Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc000679680, 0xc000be9878, 0xc0008dd9f0, 0xc000978080, 0x0, 0x0, 0x0)
+2019-11-14T03:31:35.3710560Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema/provider.go:294 +0x196
+2019-11-14T03:31:35.3710796Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi-terraform-bridge/pkg/tfbridge.(*Provider).Update(0xc0000d02c0, 0x4573e00, 0xc0009729f0, 0xc0001011f0, 0xc0000d02c0, 0x38b2101, 0xc000955600)
+2019-11-14T03:31:35.3710988Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi-terraform-bridge/pkg/tfbridge/provider.go:814 +0xa1b
+2019-11-14T03:31:35.3711146Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go._ResourceProvider_Update_Handler.func1(0x4573e00, 0xc0009729f0, 0x3bb05c0, 0xc0001011f0, 0x3badb40, 0x7d0a4d8, 0x4573e00, 0xc0009729f0)
+2019-11-14T03:31:35.3711339Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go/provider.pb.go:1592 +0x8d
+2019-11-14T03:31:35.3711514Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/grpc-ecosystem/grpc-opentracing/go/otgrpc.OpenTracingServerInterceptor.func1(0x4573e00, 0xc0006fec90, 0x3bb05c0, 0xc0001011f0, 0xc000a32ce0, 0xc000a32d20, 0x0, 0x0, 0x44f5580, 0xc0004368a0)
+2019-11-14T03:31:35.3711685Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/grpc-ecosystem/grpc-opentracing/go/otgrpc/server.go:61 +0x367
+2019-11-14T03:31:35.3711856Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go._ResourceProvider_Update_Handler(0x3c0f6c0, 0xc0000d02c0, 0x4573e00, 0xc0006fec90, 0xc0009d7ec0, 0xc00037c8a0, 0x4573e00, 0xc0006fec90, 0xc000bdd900, 0x105c)
+2019-11-14T03:31:35.3712374Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go/provider.pb.go:1594 +0x15f
+2019-11-14T03:31:35.3712553Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).processUnaryRPC(0xc0000d0160, 0x45c69e0, 0xc000064a80, 0xc001302800, 0xc00060cff0, 0x7cdee40, 0x0, 0x0, 0x0)
+2019-11-14T03:31:35.3712694Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:995 +0x46d
+2019-11-14T03:31:35.3712861Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).handleStream(0xc0000d0160, 0x45c69e0, 0xc000064a80, 0xc001302800, 0x0)
+2019-11-14T03:31:35.3713011Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:1275 +0xdad
+2019-11-14T03:31:35.3713152Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc00004a050, 0xc0000d0160, 0x45c69e0, 0xc000064a80, 0xc001302800)
+2019-11-14T03:31:35.3713370Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:710 +0xa6
+2019-11-14T03:31:35.3713640Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running created by github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).serveStreams.func1
+2019-11-14T03:31:35.3713811Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running 	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:708 +0xa8
+2019-11-14T03:31:35.3713948Z  ~  azure:appservice:AppService storeportal-dev-as updating [diff: ~appServicePlanId,appSettings,siteConfig]; error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.3714067Z  ~  azure:appservice:AppService storeportalapi-dev-as updating [diff: ~appServicePlanId,appSettings,siteConfig]; error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.3714200Z  ~  azure:appservice:AppService storeportalorderapi-dev-as updating [diff: ~appServicePlanId]; error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.3714315Z  ~  azure:appservice:AppService storeportal-dev-as **updating failed** [diff: ~appServicePlanId,appSettings,siteConfig]; error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.3714571Z  ~  azure:appservice:AppService storeportalapi-dev-as **updating failed** [diff: ~appServicePlanId,appSettings,siteConfig]; error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.3714708Z  ~  azure:appservice:AppService storeportalorderapi-dev-as **updating failed** [diff: ~appServicePlanId]; error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.7405620Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev running error: update failed
+2019-11-14T03:31:35.7538019Z     pulumi:pulumi:Stack dcx-store-portal-apps-infra-typescript-dev **failed** 1 error; 27 messages
+2019-11-14T03:31:35.7538566Z  
+2019-11-14T03:31:35.7539635Z Diagnostics:
+2019-11-14T03:31:35.7540277Z   azure:appservice:AppService (storeportalapi-dev-as):
+2019-11-14T03:31:35.7540867Z     error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.7541136Z  
+2019-11-14T03:31:35.7541256Z   azure:appservice:AppService (storeportalorderapi-dev-as):
+2019-11-14T03:31:35.7541782Z     error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.7543180Z  
+2019-11-14T03:31:35.7543411Z   pulumi:pulumi:Stack (dcx-store-portal-apps-infra-typescript-dev):
+2019-11-14T03:31:35.7556288Z     error: update failed
+2019-11-14T03:31:35.7556370Z  
+2019-11-14T03:31:35.7556447Z     panic: interface conversion: interface {} is nil, not map[string]interface {}
+2019-11-14T03:31:35.7556537Z     goroutine 77 [running]:
+2019-11-14T03:31:35.7556652Z     github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm/helpers/azure.ExpandAppServiceLogs(0x3724ea0, 0xc000d3d880, 0x4, 0x3724ea0, 0xc000d3d880, 0xc000d3d801)
+2019-11-14T03:31:35.7556883Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm/helpers/azure/app_service.go:1256 +0xcb0
+2019-11-14T03:31:35.7557063Z     github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm.resourceArmAppServiceUpdate(0xc000101b20, 0x36e2b60, 0xc0000b8480, 0x0, 0x0)
+2019-11-14T03:31:35.7557452Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/terraform-providers/terraform-provider-azurerm/azurerm/resource_arm_app_service.go:445 +0x192d
+2019-11-14T03:31:35.7557584Z     github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc00000c200, 0xc0008dd9f0, 0xc000978080, 0x36e2b60, 0xc0000b8480, 0x1, 0x0, 0x0)
+2019-11-14T03:31:35.7557725Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema/resource.go:311 +0x26b
+2019-11-14T03:31:35.7557862Z     github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc000679680, 0xc000be9878, 0xc0008dd9f0, 0xc000978080, 0x0, 0x0, 0x0)
+2019-11-14T03:31:35.7557991Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/hashicorp/terraform-plugin-sdk/helper/schema/provider.go:294 +0x196
+2019-11-14T03:31:35.7558140Z     github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi-terraform-bridge/pkg/tfbridge.(*Provider).Update(0xc0000d02c0, 0x4573e00, 0xc0009729f0, 0xc0001011f0, 0xc0000d02c0, 0x38b2101, 0xc000955600)
+2019-11-14T03:31:35.7558264Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi-terraform-bridge/pkg/tfbridge/provider.go:814 +0xa1b
+2019-11-14T03:31:35.7558410Z     github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go._ResourceProvider_Update_Handler.func1(0x4573e00, 0xc0009729f0, 0x3bb05c0, 0xc0001011f0, 0x3badb40, 0x7d0a4d8, 0x4573e00, 0xc0009729f0)
+2019-11-14T03:31:35.7558534Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go/provider.pb.go:1592 +0x8d
+2019-11-14T03:31:35.7558679Z     github.com/pulumi/pulumi-azure/vendor/github.com/grpc-ecosystem/grpc-opentracing/go/otgrpc.OpenTracingServerInterceptor.func1(0x4573e00, 0xc0006fec90, 0x3bb05c0, 0xc0001011f0, 0xc000a32ce0, 0xc000a32d20, 0x0, 0x0, 0x44f5580, 0xc0004368a0)
+2019-11-14T03:31:35.7559449Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/grpc-ecosystem/grpc-opentracing/go/otgrpc/server.go:61 +0x367
+2019-11-14T03:31:35.7559586Z     github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go._ResourceProvider_Update_Handler(0x3c0f6c0, 0xc0000d02c0, 0x4573e00, 0xc0006fec90, 0xc0009d7ec0, 0xc00037c8a0, 0x4573e00, 0xc0006fec90, 0xc000bdd900, 0x105c)
+2019-11-14T03:31:35.7560005Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/github.com/pulumi/pulumi/sdk/proto/go/provider.pb.go:1594 +0x15f
+2019-11-14T03:31:35.7560172Z     github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).processUnaryRPC(0xc0000d0160, 0x45c69e0, 0xc000064a80, 0xc001302800, 0xc00060cff0, 0x7cdee40, 0x0, 0x0, 0x0)
+2019-11-14T03:31:35.7560373Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:995 +0x46d
+2019-11-14T03:31:35.7560549Z     github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).handleStream(0xc0000d0160, 0x45c69e0, 0xc000064a80, 0xc001302800, 0x0)
+2019-11-14T03:31:35.7560767Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:1275 +0xdad
+2019-11-14T03:31:35.7560968Z     github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc00004a050, 0xc0000d0160, 0x45c69e0, 0xc000064a80, 0xc001302800)
+2019-11-14T03:31:35.7561173Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:710 +0xa6
+2019-11-14T03:31:35.7561370Z     created by github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc.(*Server).serveStreams.func1
+2019-11-14T03:31:35.7561558Z     	/home/travis/gopath/src/github.com/pulumi/pulumi-azure/vendor/google.golang.org/grpc/server.go:708 +0xa8
+2019-11-14T03:31:35.7561908Z  
+2019-11-14T03:31:35.7562118Z   azure:appservice:AppService (storeportal-dev-as):
+2019-11-14T03:31:35.7562268Z     error: Plan apply failed: transport is closing
+2019-11-14T03:31:35.7562464Z  
+2019-11-14T03:31:35.7562524Z Resources:
+2019-11-14T03:31:35.7562601Z     3 unchanged
+2019-11-14T03:31:35.7562640Z 
+2019-11-14T03:31:35.7562700Z Duration: 10s
+2019-11-14T03:31:35.7562751Z 
+2019-11-14T03:31:35.9629680Z Permalink: https://app.pulumi.com/rajeshkumar/dcx-store-portal-apps-infra-typescript/dev/updates/9
